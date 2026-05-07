@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Frame {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            padding: 10px;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        ul li:hover {
+            color: blue;
+            cursor: pointer;
+
+        }
+
+        .login_form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        input {
+            width: 250px;
+            height: 30px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .login_form img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .parent {
+            margin: 15px;
+        }
+
+        .product {
+            margin: 15px;
+        }
+
+        .product img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="Frame">
+        <h1>Photo Frame</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </div>
+    <form class="login_form">
+        <label>
+            <img src="https://images.pexels.com/photos/5973136/pexels-photo-5973136.jpeg" alt="">
+        </label>
+        <label class="form_heading"> <h2>Login Page</h2></label>
+        <label>
+            <input type="text" placeholder="Enter Your Email">
+        </label>
+
+        <label>
+            <input type="password" placeholder="Enter Your Password">
+        </label>
+
+    </form>
+
+
+    <div class="parent">
+        <div class="product">
+            <img src="https://images.pexels.com/photos/1226721/pexels-photo-1226721.jpeg" alt="image not found">
+            <h2>You Collection</h2>
+            <button>Tap to see</button>
+        </div>
+    </div>
+</body>
+
+</html>
