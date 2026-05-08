@@ -9,26 +9,34 @@
         body {
             margin: 0;
             padding: 0;
+            background-color: black;
+            color: white;
         }
 
         .Frame {
             display: flex;
             justify-content: space-between;
-            margin: 10px;
-            padding: 10px;
+            margin: 5px;
+            padding: 5px;
             align-items: center;
         }
 
         ul {
             list-style-type: none;
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
 
         ul li:hover {
             color: blue;
             cursor: pointer;
 
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         .login_form {
@@ -53,11 +61,15 @@
         }
 
         .parent {
-            margin: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-top: 100px;
+            margin-left: 30px;
         }
 
         .product {
             margin: 15px;
+            position: relative;
         }
 
         .product img {
@@ -66,43 +78,119 @@
             border-radius: 10px;
         }
 
+
+        .product button {
+            text-align: center;
+            background-color: burlywood;
+            padding: 10px 25px;
+            border-radius: 15px;
+            animation: btn_effect 1s infinite alternate ease-in-out;
+            animation: glowborder 1s infinite alternate ease-in-out;
+            transition: all 0.5s ease;
+        }
+
+        .product button:hover {
+            cursor: pointer;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @keyframes btn_effect {
+            0% {
+                border-top: 3px solid white;
+            }
+
+            25% {
+                border-right: 3px solid white;
+            }
+
+            50% {
+                border-bottom: 3px solid white;
+            }
+
+            75% {
+                border-left: 3px solid white;
+            }
+        }
+
+        @keyframes glowborder {
+            from {
+                box-shadow: 0 0 5px white, 0 0 10px white;
+            }
+
+            to {
+                box-shadow: 0 0 10px burlywood, 0 0 20px burlywood;
+            }
+        }
+
+        footer {
+            border-top: 1px solid white;
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <div class="Frame">
-        <h1>Photo Frame</h1>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </div>
-    <form class="login_form">
-        <label>
-            <img src="https://images.pexels.com/photos/5973136/pexels-photo-5973136.jpeg" alt="">
-        </label>
-        <label class="form_heading"> <h2>Login Page</h2></label>
-        <label>
-            <input type="text" placeholder="Enter Your Email">
-        </label>
-
-        <label>
-            <input type="password" placeholder="Enter Your Password">
-        </label>
-
-    </form>
-
-
-    <div class="parent">
-        <div class="product">
-            <img src="https://images.pexels.com/photos/1226721/pexels-photo-1226721.jpeg" alt="image not found">
-            <h2>You Collection</h2>
-            <button>Tap to see</button>
+    <header>
+        <div class="Frame">
+            <h1>Album Photos</h1>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <form class="login_form">
+            <label>
+                <img src="https://images.pexels.com/photos/5973136/pexels-photo-5973136.jpeg" alt="">
+            </label>
+            <label class="form_heading">
+                <h2>Login Page</h2>
+            </label>
+            <label>
+                <input type="text" placeholder="Enter Your Email">
+            </label>
+
+            <label>
+                <input type="password" placeholder="Enter Your Password">
+            </label>
+
+        </form>
+
+        <div class="parent">
+            <div class="product">
+                <img src="https://images.pexels.com/photos/9386692/pexels-photo-9386692.png" alt="image not found">
+                <h2>Shadow Box</h2>
+                <p>$25.00</p>
+                <button>Buy</button>
+            </div>
+
+            <div class="product">
+                <img src="https://images.pexels.com/photos/35597083/pexels-photo-35597083.jpeg" alt="image not found">
+                <h2>Decorative Frames</h2>
+                <p>$50.00</p>
+                <button>Buy</button>
+            </div>
+
+            <div class="product">
+                <img src="https://images.pexels.com/photos/17220398/pexels-photo-17220398.jpeg" alt="image not found">
+                <h2>Hanging Frame</h2>
+                <p>$35.00</p>
+                <button>Buy</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>In This Platform You can able to get quality products. Since &copy;2026</h3>
+    </footer>
 </body>
 
 </html>
